@@ -26,12 +26,12 @@ namespace Insurance.Test
             InsuranceModel model = new InsuranceModel()
             {
                  Name="Rana",
-                 Age=36,
+                 Age=40,
                  Occupation= "Author",
-                 Death=200000
+                 Death=500000
             };
             insuranceMock
-                .Setup(x => x.CalculatePremium(model)).Returns(129600);
+                .Setup(x => x.CalculatePremium(model)).Returns(1666.66);
             //Act
             var result=controller.CalculatePremiumAction(model);
             //Assert
